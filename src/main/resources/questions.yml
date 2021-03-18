@@ -1,0 +1,11 @@
+questions:
+  "title":
+    question: "Does pineapple go on pizza?"
+    answers:
+      correct: "No one cares"
+      wrong:
+        - "Yes"
+        - "No"
+        - "Maybe"
+        - "Definitely yes"
+        - "Monke"

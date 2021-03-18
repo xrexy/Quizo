@@ -1,0 +1,15 @@
+name: Quizo
+version: ${project.version}
+main: me.xrexy.quizo.Quizo
+api-version: 1.12.2
+authors: [ xrexy ]
+
+commands:
+  quizo:
+    usage: /<command>
+    description: Main command of Quizo plugin
+
+permissions:
+  quizo.use:
+    description: Use of "/quizo" command
+    default: op

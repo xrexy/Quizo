@@ -1,0 +1,50 @@
+debug: true
+prefix: "&8[&9&lQUIZO&8]"
+answers-count: 3
+delay-between-questions: 3600 # seconds
+delay-on-enable: 0 # seconds
+
+messages:
+  help:
+    - "line 1"
+    - "line 2"
+
+  quiz:
+    time-limit: 60 #seconds
+    answer-line-break: true # empty line after every answer
+    answer-format: " &f[%id%] &f> &a%answer%"
+    answer-hover: "&aНатисни за да познаеш &e#%id%"
+    end-message: "%prefix% &7Времето свърши! Правилният отговор беше &a%answer% &7с ID: &a%id% &8(&a%correct-answers%&7/%total-answers%&8)"
+    not-running: "%prefix% &cВ момента няма активен въпрос!"
+    already-running: "%prefix% &cВече има активен въпрос, можете да го спрете с &7/quizo cancel"
+    timestamps:
+      30: "30s left"
+      20: "20s left"
+      15: "15s left"
+      10: "10s left"
+      5: "5s left"
+      3: "3s left"
+      2: "2s left"
+      1: "1s left"
+    format:
+      - " "
+      - "  &c[Q/A] &7%question% &8(%time-limit%с. да отговорите)"
+      - " "
+      - " "
+      # (n) answers go below here
+    rewards:
+      - "give %player% diamond_block 2"
+      - "eco give %player% 1000"
+  guess:
+    correct-global-toggle: true
+    correct-global: "%prefix% &f%player% &aпозна отговорът!"
+    correct: "%prefix% &aЧестито! Ти позна отговорът!"
+    incorrect: "%prefix% &cГрешен отговор"
+    already-guessed: "%prefix% &cВече използвахте своят шанс!"
+    invalid-guess: "%prefix% &cПредположението ви не бе валидно!"
+  cancel:
+    sender: "%prefix% &cТи прекрати сегашният въпрос!"
+    global-toggle: true
+    global: "%prefix% &f%player% &cпрекрати сегашният въпрос!"
+  no-permission: "%prefix% &cНямате достатъчно права да използвате тази команда!"
+  invalid-args: "%prefix% &cНевалидни аргументи, опитай отново!"
